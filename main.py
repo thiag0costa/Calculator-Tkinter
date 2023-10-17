@@ -1,12 +1,14 @@
 from tkinter import *
 
 janela = Tk()
-janela.geometry('320x200+500+150')
+janela.geometry('320x145+500+150')
+janela.title("Tkinter Calculator")
 
 def calcular():
     entradaNumeros = entrada.get()
-    result = round(eval(entradaNumeros), 2)
-    resultado['text'] = result
+    result = str(round(eval(entradaNumeros), 10))
+    entrada.delete(0, 'end')  # Remove o valor anterior
+    entrada.insert(0, result)  # Insere o resultado
 
 def on_click(text):
    entrada.insert('end',text)
@@ -134,12 +136,6 @@ botaoMultiplicar = Button(
     command=lambda:on_click("*")
 )
 botaoMultiplicar.grid(row=4, column=3)
-resultado = Label(
-    master=janela,
-    font=('Arial', 40, 'bold'),
-    text='',
-    foreground="green"
-)
-resultado.grid(row=5, columnspan=4)
+
 
 janela.mainloop()
