@@ -5,7 +5,7 @@ janela.geometry('320x200+500+150')
 
 def calcular():
     entradaNumeros = entrada.get()
-    result = eval(entradaNumeros)
+    result = round(eval(entradaNumeros), 2)
     resultado['text'] = result
 
 def on_click(text):

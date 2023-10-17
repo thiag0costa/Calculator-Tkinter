@@ -1,1 +1,1 @@
-Projeto de calculadora usando o Tkinter.
+Projeto de Calculadora feita usando Tkinter.
